@@ -745,6 +745,96 @@ section { padding: 7rem 0; }
 .form-btn:hover { background: #3d3d3f; }
 .form-note { font-size: 0.71rem; color: #98989d; text-align: center; margin-top: 0.5rem; }
 
+/* RESEARCH */
+#research { background: #f5f5f7; }
+.research-grid {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.05rem;
+}
+.research-card {
+  background: #ffffff;
+  border: 1px solid #e5e5ea;
+  border-radius: 16px;
+  padding: 1.8rem;
+  transition: all 0.22s;
+  cursor: default;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.research-card:hover { border-color: #b8b8be; box-shadow: 0 6px 30px rgba(0,0,0,0.07); transform: translateY(-2px); }
+.research-card.full  { flex: 100%; min-width: 100%; }
+.research-card.half  { flex: 1; min-width: 280px; }
+.research-card.third { flex: 1; min-width: 240px; }
+.rc-category {
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.rc-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.cat-cyber  { color: #c45000; }  .dot-cyber  { background: #c45000; }
+.cat-net    { color: #0066cc; }  .dot-net    { background: #0066cc; }
+.cat-ai     { color: #5e3bc1; }  .dot-ai     { background: #5e3bc1; }
+.cat-health { color: #1a7f3c; }  .dot-health { background: #1a7f3c; }
+.cat-eng    { color: #98989d; }  .dot-eng    { background: #98989d; }
+.cat-biz    { color: #b45309; }  .dot-biz    { background: #b45309; }
+.rc-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: 0.65rem;
+}
+.rc-desc { font-size: 0.8rem; color: #6e6e73; line-height: 1.72; font-weight: 300; flex: 1; margin-bottom: 1.1rem; }
+.rc-footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f5f5f7;
+}
+.rc-tags { display: -webkit-flex; display: flex; flex-wrap: wrap; gap: 0.33rem; }
+.rc-tag {
+  font-size: 0.67rem;
+  color: #6e6e73;
+  background: #f5f5f7;
+  border: 1px solid #e5e5ea;
+  border-radius: 100px;
+  padding: 0.15rem 0.58rem;
+  font-weight: 500;
+}
+.rc-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0066cc;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+  transition: opacity 0.18s;
+}
+.rc-link:hover { opacity: 0.7; }
+.rc-link svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
 /* FOOTER */
 footer {
   background: #f5f5f7;
@@ -802,6 +892,7 @@ footer {
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#research">Research</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1083,6 +1174,145 @@ footer {
         <div class="tools-label">Security and Compliance <span class="sg-line"></span></div>
         <div class="tools-cloud"><span class="tool-pill hi">ISO 27001</span><span class="tool-pill hi">GDPR</span><span class="tool-pill">NIST Framework</span><span class="tool-pill">OWASP</span><span class="tool-pill">MITRE ATT&amp;CK</span><span class="tool-pill">Zero Trust</span><span class="tool-pill">CQC / DBS</span><span class="tool-pill">HIPAA</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <div class="section-header fade">
+      <div class="eyebrow">Research and Publications</div>
+      <h2 class="section-h">Academic Research and Whitepapers</h2>
+      <p class="section-sub">Peer-reviewed research and technical whitepapers spanning cybersecurity, telecoms, digital transformation, and enterprise risk management.</p>
+    </div>
+    <div class="research-grid fade">
+
+      <div class="research-card full">
+        <div class="rc-category cat-ai"><span class="rc-dot dot-ai"></span>AI Security &middot; MSc Cybersecurity Dissertation</div>
+        <div class="rc-title">Hybrid Deepfake Detection Framework and Enterprise Governance</div>
+        <p class="rc-desc">Investigates the growing threat of deepfake-enabled cyber attacks, proposing a hybrid EfficientNetV2-S and tri-modal RBF SVM machine learning detection pipeline alongside practical organisational countermeasures to protect enterprise identity, communications, and digital trust. Achieves AUC of 0.9989 on FakeAVCeleb and 0.9998 on FF++ C23 benchmark datasets.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">Deepfake Detection</span><span class="rc-tag">Machine Learning</span><span class="rc-tag">EfficientNetV2</span><span class="rc-tag">SVM</span><span class="rc-tag">AI Security</span><span class="rc-tag">Enterprise Governance</span></div>
+        </div>
+      </div>
+
+      <div class="research-card half">
+        <div class="rc-category cat-cyber"><span class="rc-dot dot-cyber"></span>Cybersecurity &middot; Penetration Testing</div>
+        <div class="rc-title">Security Analysis and Penetration Testing of a 3CX VoIP Network System</div>
+        <p class="rc-desc">An in-depth security audit and penetration testing engagement on a 3CX Voice over IP network, identifying critical vulnerabilities, attack vectors, and mitigation strategies for enterprise telephony environments.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">Pen Testing</span><span class="rc-tag">VoIP Security</span><span class="rc-tag">3CX</span><span class="rc-tag">Network Analysis</span></div>
+        </div>
+      </div>
+
+      <div class="research-card half">
+        <div class="rc-category cat-cyber"><span class="rc-dot dot-cyber"></span>Cybersecurity &middot; SME Research</div>
+        <div class="rc-title">Security and Penetration Testing of a Yate VoIP Network for SMEs</div>
+        <p class="rc-desc">Comprehensive security evaluation of Yate-based VoIP infrastructure tailored for small and medium enterprises, covering threat modelling, exploit testing, and hardening recommendations.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">Yate VoIP</span><span class="rc-tag">SME Security</span><span class="rc-tag">Threat Modelling</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Penetration-Testing-on-Yate-VoIP-System/blob/dfb42d6122ca434e93d9aeabc3129c94334b1d1a/Penetration_Testing_Yate_VoIP_OA.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card third">
+        <div class="rc-category cat-cyber"><span class="rc-dot dot-cyber"></span>Cybersecurity &middot; ISO 27001</div>
+        <div class="rc-title">Critical Analysis of Security Requirements for ZenithTech Corporation</div>
+        <p class="rc-desc">A critical analysis of information security requirements under ISO/IEC 27001:2022 and ISO/IEC 27002:2022 frameworks applied to ZenithTech Corporation's enterprise security posture and compliance strategy.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">ISO 27001</span><span class="rc-tag">ISO 27002</span><span class="rc-tag">Compliance</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Critical-Analysis-of-the-Security-Requirements-undert-ISO-IEC-27001-2022-and-ISO-IEC-27002-2022-/blob/209aa94a700ed79f1a14b6036fcd0f448f28623a/ZenithTech_Security_Analysis_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card third">
+        <div class="rc-category cat-cyber"><span class="rc-dot dot-cyber"></span>Cybersecurity &middot; OWASP</div>
+        <div class="rc-title">Investigating OWASP A02:2025 Security Misconfiguration in HealthLearn</div>
+        <p class="rc-desc">Investigates and mitigates OWASP A02:2025 Security Misconfiguration vulnerabilities within the HealthLearn Platform, providing actionable remediation strategies and security hardening recommendations.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">OWASP</span><span class="rc-tag">Misconfiguration</span><span class="rc-tag">Vulnerability</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Security-Misconfiguration-in-the-HealthLearn-Platform-Investigating-and-Mitigating-OWASP-A02-2025/blob/283e662b01cd66bef29aad046ee75ad10d7137a7/HealthLearn_OWASP_A02_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card third">
+        <div class="rc-category cat-cyber"><span class="rc-dot dot-cyber"></span>Enterprise Security &middot; Risk Framework</div>
+        <div class="rc-title">Enterprise Security Risk Mitigation Framework</div>
+        <p class="rc-desc">A comprehensive cybersecurity risk mitigation strategy including a Business Impact Analysis aligned with ISO/IEC 27001:2022, proposing Zero Trust architecture, endpoint protection, and disaster recovery protocols.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">ISO 27001</span><span class="rc-tag">NIST</span><span class="rc-tag">Zero Trust</span><span class="rc-tag">Risk Mitigation</span></div>
+        </div>
+      </div>
+
+      <div class="research-card half">
+        <div class="rc-category cat-health"><span class="rc-dot dot-health"></span>Healthcare IT &middot; Compliance Policy</div>
+        <div class="rc-title">Health Information Protection Policy (HIPP) &ndash; HIPAA Compliant</div>
+        <p class="rc-desc">Development of a comprehensive Health Information Protection Policy aligned with HIPAA regulatory standards, covering data classification, access controls, breach response protocols, and staff compliance training frameworks.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">HIPAA</span><span class="rc-tag">Healthcare IT</span><span class="rc-tag">Data Protection</span><span class="rc-tag">Compliance</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Health-Information-Protection-Policy-HIPP-/blob/75afa97aabb2a76ce7f2ed2e809126bb950d716a/HIPP_Policy_Framework_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card half">
+        <div class="rc-category cat-biz"><span class="rc-dot dot-biz"></span>Digital Transformation &middot; Case Study</div>
+        <div class="rc-title">Scaling Mobile Application Startups: A Case Study of Bazaart</div>
+        <p class="rc-desc">Strategic case study examining how Bazaart navigated startup scaling challenges, analysing product development cycles, user acquisition strategies, technical architecture decisions, and growth frameworks for mobile-first startups.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">Startup Scaling</span><span class="rc-tag">Mobile Dev</span><span class="rc-tag">Growth Strategy</span></div>
+        </div>
+      </div>
+
+      <div class="research-card third">
+        <div class="rc-category cat-net"><span class="rc-dot dot-net"></span>Networking &middot; IP Multicast</div>
+        <div class="rc-title">IP Multicast Video Distribution Networks</div>
+        <p class="rc-desc">Covers PIM protocols, Auto-RP configuration, and failover verification for enterprise-grade multicast video distribution across IP networks.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">PIM Protocols</span><span class="rc-tag">Auto-RP</span><span class="rc-tag">Multicast</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Multicast-Video-Distribution-Protocol-Design-Configuration-and-Verification/blob/25d40b2c5e8476bceb434e82018e66fb75b24a15/Multicast_Video_Distribution_PIM_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card third">
+        <div class="rc-category cat-net"><span class="rc-dot dot-net"></span>Networking &middot; QoS</div>
+        <div class="rc-title">IP Video Delivery, QoS Classification, and H.264 Compression</div>
+        <p class="rc-desc">Examines streaming methods, packet marking, DiffServ QoS architecture, and H.264 codec implementation for optimised IP video delivery across enterprise networks.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">QoS</span><span class="rc-tag">H.264</span><span class="rc-tag">DiffServ</span><span class="rc-tag">Streaming</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/IP-Based-Video-Delivery-QoS-Traffic-Classification-and-H.264-Video-Coding/blob/570eb97489f0b4304082f84c617963f721e24b60/IP_Video_Delivery_QoS_H264_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card third">
+        <div class="rc-category cat-net"><span class="rc-dot dot-net"></span>Telecoms &middot; Mobile Networks</div>
+        <div class="rc-title">Mobile Network Evolution: GSM, UMTS, HSPA, and LTE</div>
+        <p class="rc-desc">Full 2G to 4G architecture comparison covering GSM, UMTS, HSPA, and LTE technologies with detailed data rate tables and evolutionary analysis of mobile network standards.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">GSM</span><span class="rc-tag">LTE</span><span class="rc-tag">UMTS</span><span class="rc-tag">HSPA</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Mobile-Network-Evolution-From-GSM-to-LTE---Architecture-Performance-and-Technology-Transitions/blob/4d953a46fe7cd2858ec03f7ea85bf6b7677e3723/Mobile_Network_Evolution_GSM_to_LTE_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card half">
+        <div class="rc-category cat-net"><span class="rc-dot dot-net"></span>Telecoms &middot; Open Source</div>
+        <div class="rc-title">Open Source and Hosted Cellular Solutions: A Comparative Review</div>
+        <p class="rc-desc">Comparative analysis of OpenBTS, OpenBSC, and Asterisk against hosted VoIP solutions, evaluating cost, scalability, and deployment complexity for SME telecoms environments.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">OpenBTS</span><span class="rc-tag">OpenBSC</span><span class="rc-tag">Asterisk</span><span class="rc-tag">VoIP</span></div>
+          <a class="rc-link" href="https://github.com/dipmipAji/Open-Source-Cellular-Solutions-vs.-Hosted-Cellular-Systems-A-Comparative-Technical-Review/blob/4d9061e0bb18707e730cca9eca27887e3b5952bf/OpenSource_vs_Hosted_Cellular_Research_Article.pdf" target="_blank">Read Paper <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="research-card half">
+        <div class="rc-category cat-eng"><span class="rc-dot dot-eng"></span>Electrical Engineering &middot; Hardware Design</div>
+        <div class="rc-title">Design and Construction of a Domestic Power Availability Warning System</div>
+        <p class="rc-desc">An 8051 microcontroller-based system capable of alerting consumers of power availability, indicating phase conditions, and selecting the best phase via A/D converter integration when voltage drops occur.</p>
+        <div class="rc-footer">
+          <div class="rc-tags"><span class="rc-tag">Embedded Systems</span><span class="rc-tag">Power Monitoring</span><span class="rc-tag">Circuit Design</span><span class="rc-tag">8051</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
